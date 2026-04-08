@@ -20,7 +20,8 @@ body {
   padding: 25px;
   background-color: white;
   border: 1px solid #6d6a6a;
-  position: sticky;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar {
@@ -116,6 +117,7 @@ body {
   padding: 100px 20px;
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .herramientas-container {
@@ -128,7 +130,7 @@ body {
 
 .herramientas {
   font-family: "Playfair Display", serif;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   color: #333;
   margin: 0;
@@ -155,11 +157,15 @@ body {
 }
 
 .icono img {
-  width: 55px;
-  height: 55px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   transition: transform 0.3 ease;
+}
+
+.icono img[src*="figma"] {
+  transform: scale(0.85);
 }
 
 .icono p {
@@ -170,6 +176,134 @@ body {
 }
 
 /*EFECTO HOVER ICONOS*/
-.icono:hover img {
-  transform: scale(1.1);
+.icono:hover img:not([src*="figma"]) {
+  transform: scale(1.2);
+}
+.icono:hover img[src*="figma"] {
+  transform: scale(1);
+}
+
+/*MARQUEE*/
+.divisor-marquee {
+  width: 100%;
+  height: 250px;
+  background-color: #f8d7da;
+  transform: skewY(-2deg);
+  box-shadow: 0 5px 15px #f8d7da;
+}
+
+/*SECCIÓN PROYECTOS*/
+.proyectos-section {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+  margin-top: -50px;
+}
+
+.titulo {
+  text-align: center;
+  max-width: 700px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.titulo-proyectos {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.proyectos-grid {
+  display: flex;
+  overflow: auto;
+  gap: 30px;
+  max-width: 100%;
+  padding: 20px 50px;
+}
+.proyectos-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.proyecto-card {
+  flex: 0 0 300px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: center;
+}
+
+.proyecto-img {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+  border-top: 1px solid #cbcbcb;
+  border-left: 1px solid #cbcbcb;
+  border-right: 1px solid #cbcbcb;
+}
+.proyecto-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition:
+    opacity 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+
+/*HOVER IMAGENES*/
+.proyecto-card:hover .img-default {
+  opacity: 0;
+}
+.proyecto-card:hover .img-hover {
+  opacity: 1;
+}
+
+/*TARJETAS*/
+.proyecto-info {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100px;
+  justify-content: flex-start;
+  border-radius: 0 0 20px 20px;
+}
+
+.proyecto-card h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.proyecto-card p {
+  line-height: 1.6;
+  color: #333;
+  font-size: 12px;
+  text-align: justify;
+}
+/*COLORES TARJETAS*/
+.roomii {
+  background-color: #fce4ec;
+}
+.libro {
+  background-color: #e1f5fe;
+}
+.catálogo {
+  background-color: #effee1;
+}
+.animayo {
+  background-color: #fce4ec;
 }

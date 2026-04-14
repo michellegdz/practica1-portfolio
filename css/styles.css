@@ -48,7 +48,6 @@ body {
   letter-spacing: -1px;
   text-transform: uppercase;
 }
-
 .M {
   font-family: Parisienne, cursive;
   color: #ff85a2;
@@ -196,11 +195,32 @@ body {
 }
 
 /*MARQUEES*/
-.divisor-marquee,
-.divisor-marquee2 {
+.marquee {
   width: 100%;
-  height: 80px;
   background-color: pink;
+  color: #fdfdfd;
+  font-family: "Playfair Display", serif;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 15px 0;
+  font-weight: 700;
+}
+.marquee-content {
+  display: inline-block;
+  padding-left: 0;
+  animation: scroll-left 15s linear infinite;
+}
+.marquee-content span {
+  display: inline-block;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /*SECCIÓN PROYECTOS*/

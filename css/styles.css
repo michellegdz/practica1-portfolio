@@ -12,79 +12,81 @@ html {
 }
 
 body {
-  background-color: #fdfdfd;
-  background-image:
-    linear-gradient(#e5e5e5 1px, transparent 1px),
-    linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
-  background-size: 30px 30px;
-  background-attachment: fixed;
+  background-color: #fdfbf4;
+  color: #333;
+  font-family: "Source Sans 3", sans-serif;
+  min-height: 100%;
+  margin: 0;
 }
 
+/*MARQUEE 1*/
+.marquee1 {
+  background-color: #e3e76f;
+  padding: 8px 0;
+  width: 100%;
+  position: relative;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marquee1-content {
+  display: block;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  color: #702e25;
+}
+
+/*HEADER*/
 .main-header {
   width: 100%;
-  padding: 25px;
-  background-color: white;
-  border: 1px solid #6d6a6a;
+  box-sizing: border-box;
+  padding: 10px 40px;
+  background-color: #fdfbf4;
+  border-bottom: 1px solid #000000;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%;
-  padding: 0 10px;
-  flex-wrap: wrap;
-}
-
-/*LOGO*/
-.logo {
-  color: #ff85a2;
-  font-size: 20px;
-  font-weight: 900;
-  letter-spacing: -1px;
-  text-transform: uppercase;
 }
 .M {
-  font-family: Parisienne, cursive;
-  color: #ff85a2;
   font-size: 40px;
-  font-weight: 700;
+  font-family: "Parisienne", cursive;
+  color: #fc9b7a;
+  font-weight: 600;
 }
 .GD {
-  color: #333;
-  font-weight: 700;
+  font-size: 20px;
+  color: #fc9b7a;
 }
 
 /*MENÚ DE NAVEGACIÓN*/
 .nav-links {
   display: flex;
+  gap: 30px;
   list-style: none;
-  gap: 20px;
   margin: 0;
-  padding: 0px;
-  margin-left: auto;
+  padding: 0;
 }
 
 .nav-links a {
-  white-space: nowrap;
   text-decoration: none;
-  color: #333;
-  background-color: #f8d7da;
-  padding: 12px 20px;
-  border: 1px solid #6d6a6a;
-  border-radius: 50px;
-  font-size: 12px;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  color: #702e25;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s ease;
 }
 
 /*EFECTO HOVER LINKS*/
 .nav-links a:hover {
-  color: #ff85a2;
+  opacity: 0.6;
 }
 
 /*SECCIÓN SOBRE MÍ*/
@@ -124,7 +126,7 @@ body {
 }
 
 .diseño {
-  font-family: "Playfair Display", serif;
+  font-family: "Platform", Arial, sans-serif;
   color: #bd586f;
   font-weight: 600;
 }
@@ -195,31 +197,25 @@ body {
 }
 
 /*MARQUEES*/
-.marquee {
-  width: 100%;
-  background-color: pink;
-  color: #fdfdfd;
-  font-family: "Playfair Display", serif;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 15px 0;
-  font-weight: 700;
-}
-.marquee-content {
-  display: inline-block;
-  padding-left: 0;
-  animation: scroll-left 15s linear infinite;
-}
-.marquee-content span {
-  display: inline-block;
+
+/* Los colores de la referencia */
+.morado {
+  background-color: #e6e0f8; /* Lila suave */
 }
 
-@keyframes scroll-left {
+.naranja {
+  background-color: #a65237; /* Naranja tierra */
+}
+
+/* Animación infinita */
+@keyframes mover-cuadros {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(
+      -50%
+    ); /* Se mueve la mitad para empalmar con la copia */
   }
 }
 
@@ -394,13 +390,6 @@ body {
   margin-bottom: 10px;
   color: #333;
 }
-.copyright {
-  font-size: 13px;
-  margin-top: 50px;
-  border-top: 1px solid #6d6a6a;
-  padding-top: 20px;
-  color: #333;
-}
 
 /*ICONOS REDES*/
 .iconos-contacto ul {
@@ -475,28 +464,40 @@ body {
 
 /*FOOTER*/
 .main-footer {
+  background-color: #fc9b7a; /* Color exacto de la referencia */
+  padding: 15px 40px; /* Altura estrecha y elegante */
   width: 100%;
-  background-color: #ffffff;
-  padding: 40px 0;
-  text-align: center;
-  border-top: 1px solid #6d6a6a;
-  position: relative;
-  z-index: 10;
+  box-sizing: border-box;
 }
+
 .footer-container {
-  width: 80%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Empuja los textos a los extremos */
+  align-items: center;
+  max-width: 100%;
 }
-.footer-text {
-  font-size: 14px;
-  color: #6d6a6a;
-  letter-spacing: 1px;
+
+.copyright {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #702e25;
+  margin: 0;
 }
-.autora {
-  font-family: "Playfair Display", serif;
-  color: #bd586f;
-  font-weight: 700;
-  font-size: 18px;
+.créditos {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
+  text-underline-offset: 3px; /* Separa la línea del texto */
+  text-decoration-thickness: 1px;
+  cursor: default; /* No es un link, así que el cursor no cambia */
+  color: #702e25;
+}
+.iniciales {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
   margin-left: 5px;
-  font-style: italic;
+  color: #702e25;
 }

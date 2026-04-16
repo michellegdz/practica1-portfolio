@@ -1,5 +1,6 @@
 /*BREAKPOINT TABLET*/
 @media (max-width: 768px) {
+  /*HEADER*/
   .hamburguesa {
     display: flex;
     align-items: center;
@@ -10,26 +11,31 @@
   }
   .nav-links {
     position: fixed;
-    top: 80px;
+    top: 75px;
     right: -100%;
-    width: 100%;
-    height: calc(100vh - 80px);
+    width: 250px;
+    height: auto;
     background-color: #fdfbf4;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 30px 0;
+    gap: 25px;
+    border: 1.5px solid #702e25;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     transition: 0.5s ease-in-out;
-    border-top: 1px solid #702e25;
-    gap: 40px;
+    z-index: 1000;
   }
   .menu-check:checked ~ .nav-links {
-    right: 0;
+    right: 20px;
   }
+  /*SOBRE MÍ*/
   .contenido-sobre-mí {
     flex-direction: column;
-    padding: 100px 5% 50px 5%;
+    align-items: center;
     text-align: center;
-    min-height: auto;
+    padding: 60px 10%;
   }
   .bio {
     margin-top: 0;
@@ -37,45 +43,95 @@
     width: 100%;
   }
   .línea {
+    width: 60%;
     margin: 15px auto;
   }
   .flecha {
-    margin: 40px 0;
+    margin: 0;
     transform: rotate(90deg);
   }
   .herramientas {
-    padding-left: 0;
     width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
   }
   .mis-herramientas {
-    margin-bottom: 40px;
+    margin: 0;
   }
+  .iconos img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  /*PROYECTOS*/
   .banner-proyectos {
-    width: 90%;
-    margin: 60px auto 40px auto;
+    width: 95%;
+    margin: 60px auto 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px 20px;
+    position: relative;
   }
   .círculo {
-    left: 50%;
-    transform: translateX(-50%) rotate(-10deg);
+    position: relative;
+    margin-top: -40px;
+    margin-left: 0;
+    left: auto;
+    transform: rotate(-10deg);
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+    z-index: 11;
   }
   .intro-proyectos {
-    margin: 60px 0 0 0;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    position: relative;
   }
+  /*TARJETAS*/
   .grid-proyectos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
-    gap: 15px;
+    gap: 20px;
   }
   .tarjeta {
     max-width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: auto;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
   }
   .contenedor-imagen {
-    height: 250px;
+    width: 100%;
+    aspect-ratio: 1, 1;
+    height: auto;
+    position: relative;
+  }
+  .info-tarjeta {
+    padding: 15px;
+    display: block;
+    background-color: #bbe0ef;
+    flex-grow: 1;
+  }
+  .info-tarjeta p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    text-align: left;
   }
   .sección-contacto {
     padding: 80px 5%;
@@ -111,8 +167,23 @@
   }
   .grid-proyectos {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .contenedor-imagen {
+    aspect-ratio: 4/3;
+  }
+  .info-tarjeta h3 {
+    font-size: 1.1rem;
   }
   .formulario {
     padding: 20px 10px;
+  }
+  .línea {
+    width: 70%;
+    margin: 10px auto;
+  }
+  .intro-proyectos {
+    max-width: 300px;
+    font-size: 0.85rem;
   }
 }

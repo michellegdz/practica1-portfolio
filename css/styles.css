@@ -123,10 +123,10 @@ body {
   margin-top: 5px;
 }
 .línea {
-  width: 100%;
+  width: 80%;
   max-width: 350px;
   border-top: 1.5px dashed rgb(110, 33, 25);
-  margin-top: 5px;
+  margin-top: 20px 0;
 }
 .descripción {
   font-size: clamp(1rem, 1.5vw, 1.2rem);

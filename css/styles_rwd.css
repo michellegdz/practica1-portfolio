@@ -1,1 +1,118 @@
-@media();
+/*BREAKPOINT TABLET*/
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #abdadc;
+    cursor: pointer;
+  }
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: #fdfbf4;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+    border-top: 1px solid #702e25;
+    gap: 40px;
+  }
+  .menu-check:checked ~ .nav-links {
+    right: 0;
+  }
+  .contenido-sobre-mí {
+    flex-direction: column;
+    padding: 100px 5% 50px 5%;
+    text-align: center;
+    min-height: auto;
+  }
+  .bio {
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .línea {
+    margin: 15px auto;
+  }
+  .flecha {
+    margin: 40px 0;
+    transform: rotate(90deg);
+  }
+  .herramientas {
+    padding-left: 0;
+    width: 100%;
+  }
+  .mis-herramientas {
+    margin-bottom: 40px;
+  }
+  .banner-proyectos {
+    width: 90%;
+    margin: 60px auto 40px auto;
+  }
+  .círculo {
+    left: 50%;
+    transform: translateX(-50%) rotate(-10deg);
+  }
+  .intro-proyectos {
+    margin: 60px 0 0 0;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    gap: 15px;
+  }
+  .tarjeta {
+    max-width: 100%;
+    aspect-ratio: 4/3;
+    height: auto;
+  }
+  .contenedor-imagen {
+    height: 250px;
+  }
+  .sección-contacto {
+    padding: 80px 5%;
+    min-height: auto;
+  }
+  .contenedor-contacto {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+  .columna-izquierda,
+  .columna-derecha {
+    flex: 0 1 100%;
+    width: 100%;
+    text-align: center;
+  }
+  .iconos-redes,
+  .línea-redes,
+  .contenedor-botón {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*BREAKPOINT MÓVIL*/
+@media (max-width: 480px) {
+  .nombre {
+    font-size: 2.2rem;
+  }
+  .diseñadora {
+    font-size: 1.4rem;
+  }
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+  .formulario {
+    padding: 20px 10px;
+  }
+}

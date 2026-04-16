@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Special+Gothic+Expanded+One&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap"
       rel="stylesheet"
     />
     <!-- Iconos -->
@@ -33,6 +33,18 @@
         <div class="logo">
           <span class="M">M</span><span class="GD">GD</span>
         </div>
+
+        <input
+          type="checkbox"
+          id="menu-toggle"
+          class="menu-check"
+          style="display: none"
+        />
+
+        <label for="menu-toggle" class="hamburguesa">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+
         <ul class="nav-links">
           <li><a href="#sobre-mí">SOBRE MÍ 👤</a></li>
           <li><a href="#proyectos">PROYECTOS 📂</a></li>
@@ -40,6 +52,203 @@
         </ul>
       </nav>
     </header>
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="sobre-mí" class="contenido-sobre-mí">
+      <div class="bio">
+        <h1 class="nombre">Michelle<br />Gallardo Díez</h1>
+        <h2 class="diseñadora">Diseñadora Gráfica</h2>
+        <div class="línea"></div>
+        <p class="descripción">Estudiante de Diseño Multimedia y Gráfico</p>
+      </div>
+      <div class="flecha">
+        <img src="img/flecha.png" alt="Flecha" class="decoración-flecha" />
+      </div>
+      <div class="herramientas">
+        <div class="mis-herramientas">
+          <p>Mis herramientas</p>
+        </div>
+        <div class="iconos">
+          <img src="img/ai.png" alt="Illustrator" />
+          <img src="img/psd.png" alt="Photoshop" />
+          <img src="img/id.png" alt="Indesign" />
+          <img src="img/figma.png" alt="Figma" />
+          <img src="img/c4d.png" alt="Cinema 4D" />
+          <img src="img/vscode.png" alt="VS Code" />
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVISOR -->
+    <div class="divisor-cuadros"></div>
+
+    <!-- SECCIÓN PROYECTOS -->
+    <section id="proyectos" class="sección-proyectos">
+      <div class="banner-proyectos">
+        <div class="círculo">
+          <h2>Mis proyectos</h2>
+        </div>
+        <p class="intro-proyectos">
+          Aquí expongo algunos de mis trabajos más destacados a lo largo de mi
+          formación 💼
+        </p>
+      </div>
+      <div class="grid-proyectos">
+        <!-- Roomii -->
+        <div class="tarjeta">
+          <div class="contenedor-imagen">
+            <img src="img/roomii.png" alt="roomii" class="portada" />
+            <img src="img/roomii2.png" alt="roomii2" class="img-hover" />
+          </div>
+          <div class="info-tarjeta">
+            <h3>Diseño App</h3>
+            <p>
+              Diseño de Roomii, una app móvil para hacer los tiempos de espera
+              más dinámicos.
+            </p>
+          </div>
+        </div>
+        <!-- Colección de libros -->
+        <div class="tarjeta">
+          <div class="contenedor-imagen">
+            <img src="img/libro.png" alt="libro" class="portada" />
+            <img src="img/libro2.png" alt="libro2" class="img-hover" />
+          </div>
+          <div class="info-tarjeta">
+            <h3>Colección de libros</h3>
+            <p>
+              Creación de una colección de tres libros/poemarios de bolsillo y
+              su respectivo merch.
+            </p>
+          </div>
+        </div>
+        <!-- Catálogo exposición -->
+        <div class="tarjeta">
+          <div class="contenedor-imagen">
+            <img src="img/catálogo.png" alt="catálogo" class="portada" />
+            <img src="img/catálogo2.png" alt="catálogo2" class="img-hover" />
+          </div>
+          <div class="info-tarjeta">
+            <h3>Catálogo exposición</h3>
+            <p>
+              Rediseño del catálgo para la exposición de Maruja Mallo en el
+              Museo Reina Sofía.
+            </p>
+          </div>
+        </div>
+        <!-- Animayo -->
+        <div class="tarjeta">
+          <div class="contenedor-imagen">
+            <img src="img/animayo.png" alt="animayo" class="portada" />
+            <img src="img/animayo2.png" alt="animayo2" class="img-hover" />
+          </div>
+          <div class="info-tarjeta">
+            <h3>Cartel Animayo</h3>
+            <p>
+              Creación de un cartel para el concurso internacional Animayo 2026.
+            </p>
+          </div>
+        </div>
+        <!-- Rediseño Nivea -->
+        <div class="tarjeta">
+          <div class="contenedor-imagen">
+            <img src="img/nivea.png" alt="nivea" class="portada" />
+            <img src="img/nivea2.png" alt="nivea2" class="img-hover" />
+          </div>
+          <div class="info-tarjeta">
+            <h3>Rediseño Packaging</h3>
+            <p>
+              Rediseño del packaging e identidad visual de Nivea Creme para
+              convertirla en marca de lujo
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVISOR DOBLE -->
+    <div class="contenedor-marquees">
+      <div class="marquee-servicios">
+        <div class="marquee-animación">
+          <span>
+            >DISEÑO WEBㅤㅤ·ㅤㅤDISEÑO EDITORIALㅤㅤ·ㅤㅤDISEÑO DE
+            PACKAGINGㅤㅤ·ㅤㅤDISEÑO 3Dㅤㅤ·ㅤㅤDISEÑO WEBㅤㅤ·ㅤㅤDISEÑO
+            EDITORIALㅤㅤ·ㅤㅤDISEÑO DE PACKAGINGㅤㅤ·ㅤㅤDISEÑO 3Dㅤㅤ·ㅤㅤ
+          </span>
+          <span>
+            >DISEÑO WEBㅤㅤ·ㅤㅤDISEÑO EDITORIALㅤㅤ·ㅤㅤDISEÑO DE
+            PACKAGINGㅤㅤ·ㅤㅤDISEÑO 3Dㅤㅤ·ㅤㅤDISEÑO WEBㅤㅤ·ㅤㅤDISEÑO
+            EDITORIALㅤㅤ·ㅤㅤDISEÑO DE PACKAGINGㅤㅤ·ㅤㅤDISEÑO 3Dㅤㅤ·ㅤㅤ
+          </span>
+        </div>
+      </div>
+      <div class="marquee-contacto">
+        <div class="marquee-animación-reversa">
+          <span
+            >CONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤ</span
+          >
+          <span
+            >CONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤCONTÁCTAMEㅤㅤ</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="sección-contacto">
+      <div class="contenedor-contacto">
+        <div class="columna-izquierda">
+          <div class="ubicación">
+            <h3>Ubicación</h3>
+            <p>
+              UDIT Universidad de Diseño, Innovación y Tecnología -<br />Campus
+              Internacional
+            </p>
+            <p>Av. de Alfonso XIII, 97</p>
+            <p>28016 Madrid, España 📍</p>
+          </div>
+          <div class="sígueme">
+            <h3>Sígueme</h3>
+            <div class="iconos-redes">
+              <a href="https://es.pinterest.com/"
+                ><i class="fa-brands fa-pinterest"></i
+              ></a>
+              <a href="https://www.instagram.com/?variant=following"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="behance.net/login"
+                ><i class="fa-brands fa-behance"></i
+              ></a>
+              <a href="https://x.com/?lang=es"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </div>
+            <div class="línea-redes"></div>
+            <p class="copyright-redes">
+              © 2026 Michelle Gallardo Díez • Portfolio
+            </p>
+          </div>
+        </div>
+        <div class="columna-derecha">
+          <h3>Formulario de contacto</h3>
+          <div class="formulario">
+            <form>
+              <input type="text" name="nombre" placeholder="NOMBRE" required />
+              <input type="email" name="email" placeholder="EMAIL" required />
+              <textarea
+                name="mensaje"
+                placeholder="MENSAJE"
+                rows="6"
+                required
+              ></textarea>
+              <div class="contenedor-botón">
+                <button type="button" class="botón-enviar">ENVIAR</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="main-footer">
